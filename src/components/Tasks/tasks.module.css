@@ -1,0 +1,103 @@
+.header{
+    background: var(--gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12.5rem;
+    position: relative;
+}
+
+
+.newOrderClass { /*input + botão*/
+    position: absolute;
+    height: 3.375rem;
+    bottom: calc(-3.375rem / 2);
+    width: 100%;
+    max-width: 46rem;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.newOrderClass input {
+    height: 100%;
+    flex: 1;
+    color: var(--gray-100);
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+.newOrderClass input::placeholder {
+    color: var(--gray-300); /*cor da letra no input*/
+}
+
+.newOrderClass button { /*botão CRIAR*/
+    height: 100%;
+    padding: 0 1rem;
+    background: var(--blue-dark);
+    color: var(--gray-100);
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+
+}
+
+.tasks {
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    margin-top: 5.625rem;
+    padding: 0 1rem;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.menu div {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+.menu p{
+    color: var(--blue);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.menu p.colorPurple{
+    color: var(--purple);
+}
+
+.menu span{
+    background: var(--gray-400);
+    color: var(--gray-200);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.imput {
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+}
+
+.layer{
+    align-items: center;
+    
+
+}
