@@ -3,6 +3,7 @@ import { Task } from '../Task';
 import styles from './tasks.module.css';
 import Logo from "../../assets/Logo.svg";
 import layer from '../Tasks/layer.svg';
+import layer2 from "../Tasks/layer2.svg";
 import React from 'react';
 
 interface ITasksProps {
@@ -20,9 +21,15 @@ export function Tasks() {
 
  const [newOrder, setNewOrder] = React.useState ('');
 
+ const [refresh, setRefresh] = React.useState (false);
+
 
   function submitNewOrder(ev:any) {
     ev.preventDefault();
+
+    if( newOrder === '') {
+        return alert('Necessário adicionar texto')
+    }
 
     setValues([     
         ...values,
@@ -49,6 +56,9 @@ export function Tasks() {
 
     setValues(values)
 
+    setRefresh(!refresh)
+
+
   }
 
   function completeTask(ev:any, id: number) {
@@ -63,8 +73,16 @@ export function Tasks() {
     values[index].isComplete = !values[index].isComplete
 
     setValues(values)
+
+    setRefresh(!refresh)
     
   }
+
+  useEffect(() => {
+
+  }, [
+    refresh
+  ])
 
     return(
         <>
@@ -73,7 +91,8 @@ export function Tasks() {
 
     <form className={styles.newOrderClass} onSubmit={submitNewOrder}>  
    
-    
+
+
     <input 
     value={newOrder}
     onChange={e => setNewOrder(e.target.value)}
@@ -109,9 +128,12 @@ export function Tasks() {
             <div className={styles.imput} 
             >
 
-
-        
-        {values.map( task =>  { 
+       <img src={layer2} /> 
+       <form className={styles.Editlayer2}
+       ></form>
+       
+       
+            {values.map( task =>  { 
             return <Task 
             id={task.id} 
             title={task.title}

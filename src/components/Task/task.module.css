@@ -49,5 +49,10 @@
     color: var(--purple-dark)
 }
 
+.text {
+    text-decoration: line-through;
+    color: var(--gray-300) !important;
+}
+
 
 

@@ -18,9 +18,8 @@ export function Task({id,title,isComplete, onChangeCompleteTask, onDeleteTask}: 
             <button onClick={ev => onChangeCompleteTask(ev, id)} className={styles.check}> 
               {isComplete ? <img src={layer1} /> : <div />} {/*marca o botão como verificado ou check, cor roxa*/}
             </button>
-              <p>
+              <p className={isComplete ? styles.text : undefined}>
                 {title}
-                {isComplete}
               </p>
 
 
