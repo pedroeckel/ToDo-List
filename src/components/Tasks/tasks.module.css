@@ -102,8 +102,32 @@ gap: 0.75rem;
 
 }
 
-.Editlayer2{
+.Editlayer2{ /*imagem da prancheta*/
+   
     align-items: center;
     border-radius: 0;
     gap: 0.8rem;
+    
+    
 }
+
+.text1{
+    width: 688px;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center; 
+    color: var(--gray-300);
+    flex: none;
+    order: 0;
+    
+
+}
+
+
+
+
+
