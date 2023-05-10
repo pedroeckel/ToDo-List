@@ -134,3 +134,24 @@ margin-bottom: 30px;
     flex: none;
     order: 0;
 }
+
+.text1{
+    width: 688px;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center; 
+    color: var(--gray-300);
+    flex: none;
+    order: 0;
+    
+
+}
+
+
+
+
+

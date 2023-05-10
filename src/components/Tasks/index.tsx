@@ -6,6 +6,7 @@ import layer from '../Tasks/layer.svg';
 import layer2 from "../Tasks/layer2.svg";
 import React from 'react';
 
+
 interface ITasksProps {
     id: number;
     title: string;
@@ -30,6 +31,7 @@ export function Tasks() {
     if( newOrder === '') {
         return alert('Necessário adicionar texto')
     }
+
 
     setValues([     
         ...values,
@@ -115,7 +117,7 @@ export function Tasks() {
     <section className={styles.menu}>
     
         <div>
-            <p>Tarefas Criadas </p>
+            <p className={styles.createTask}>Tarefas Criadas </p>
             <span> {values.length}
             </span>
         </div>
@@ -127,6 +129,14 @@ export function Tasks() {
 
             <div className={styles.imput} 
             >
+            
+                
+                <form >
+                <img className={styles.Editlayer2} src={layer2} />
+                <p className={styles.text1}> Você ainda não tem tarefas cadastradas
+                <br></br>
+                Crie tarefas e organize seus itens a fazer </p>
+                </form>
 
             {
                 values.length === 0
