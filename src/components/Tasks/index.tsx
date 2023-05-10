@@ -121,26 +121,36 @@ export function Tasks() {
         </div>
         <div>
             <p className={styles.colorPurple}>Concluídas</p>
-            <span> {listsFilterIsComplete.length} de {values.length}</span>  {/*lists é a const que filtra valores true */}
+            <span> {listsFilterIsComplete.length}{values.length === 0 ? '' : ` de ${values.length}`}</span>  {/*lists é a const que filtra valores true */}
         </div>
     </section>
 
             <div className={styles.imput} 
             >
 
-       <img src={layer2} /> 
-       <form className={styles.Editlayer2}
-       ></form>
-       
-       
-            {values.map( task =>  { 
-            return <Task 
-            id={task.id} 
-            title={task.title}
-            isComplete={task.isComplete}
-            onChangeCompleteTask={completeTask}
-            onDeleteTask={deleteTask}
-            />
+            {
+                values.length === 0
+            ?
+                <>
+                <div className={styles.Editlayer2Div}>
+                    <img  src={layer2} />
+                </div>
+                <div>
+                <p className={styles.text1}> Você ainda não tem tarefas cadastradas</p>
+                
+                <p className={styles.text2}>Crie tarefas e organize seus itens a fazer </p>
+                </div>
+                </>
+            :
+                values.map( task =>  { 
+                return <Task 
+                id={task.id} 
+                title={task.title}
+                isComplete={task.isComplete}
+                onChangeCompleteTask={completeTask}
+                onDeleteTask={deleteTask
+                }
+                />
            
         })}
         
