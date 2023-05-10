@@ -129,14 +129,6 @@ export function Tasks() {
 
             <div className={styles.imput} 
             >
-            
-                
-                <form >
-                <img className={styles.Editlayer2} src={layer2} />
-                <p className={styles.text1}> Você ainda não tem tarefas cadastradas
-                <br></br>
-                Crie tarefas e organize seus itens a fazer </p>
-                </form>
 
             {
                 values.length === 0
@@ -146,9 +138,8 @@ export function Tasks() {
                     <img  src={layer2} />
                 </div>
                 <div>
-                <p className={styles.text1}> Você ainda não tem tarefas cadastradas</p>
-                
-                <p className={styles.text2}>Crie tarefas e organize seus itens a fazer </p>
+                    <p className={styles.text1}> Você ainda não tem tarefas cadastradas</p>
+                    <p className={styles.text2}>Crie tarefas e organize seus itens a fazer </p>
                 </div>
                 </>
             :

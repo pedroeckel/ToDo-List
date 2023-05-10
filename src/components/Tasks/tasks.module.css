@@ -124,7 +124,6 @@ margin-bottom: 30px;
 
 .text2{
     width: 688px;
-    height: 44px;
     font-family: 'Inter';
     font-style: normal;
     font-size: 16px;
@@ -135,21 +134,7 @@ margin-bottom: 30px;
     order: 0;
 }
 
-.text1{
-    width: 688px;
-    height: 44px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 140%;
-    text-align: center; 
-    color: var(--gray-300);
-    flex: none;
-    order: 0;
-    
 
-}
 
 
 
