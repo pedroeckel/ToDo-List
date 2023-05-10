@@ -1,7 +1,6 @@
 import styles from './task.module.css';
 import buttonDelete from './bin.svg';
 import layer1 from '../Tasks/layer1.svg'
-import layer2 from '../Tasks/layer2.svg'
 
 interface ITaskProps{
     id: number;
@@ -20,6 +19,13 @@ export function Task({id,title,isComplete, onChangeCompleteTask, onDeleteTask}: 
               {isComplete ? <img src={layer1} /> : <div />} {/*marca o botão como verificado ou check, cor roxa*/}
             </button>
             
+              <p>
+                {title}
+                {isComplete}
+              </p>
+      
+      
+
             
             <button onClick={ev => onDeleteTask(ev, id) } className={styles.buttonDelete}>
             <img src={buttonDelete} />

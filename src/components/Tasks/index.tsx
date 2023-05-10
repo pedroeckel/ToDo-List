@@ -130,10 +130,9 @@ export function Tasks() {
             <div className={styles.imput} 
             >
             
-
                 
-                <form className={styles.Editlayer2}>
-                <img src={layer2} /> 
+                <form >
+                <img className={styles.Editlayer2} src={layer2} /> 
 
                 <p className={styles.text1}> Você ainda não tem tarefas cadastradas
                 <br></br>
